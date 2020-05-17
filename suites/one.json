@@ -39,11 +39,7 @@
       "request": {
         "url": "https://jsonplaceholder.typicode.com/posts/",
         "method": "POST",
-        "data": {
-          "title": "A Test",
-          "body": "A body",
-          "userId": 1
-        }
+        "data": "{\"title\": \"A Test\", \"body\": \"A body created by {{2.name}} ({{2.username}}) with email {{2.email}} @ {{2.address.geo.lat}} | {{2.address.geo.lng}}\", \"userId\": {{2.id}}}"
       }
     },
     {
@@ -53,7 +49,9 @@
       "checks": [
         "'{{2.name}}' == 'Leanne Graham'",
         "{{2.id}} == {{1.userId}}",
-        "{{3.title}} == 'A Test'"
+        "{{3.title}} == 'A Test'",
+        "{{3.userId}} == {{1.userId}}",
+        "{{3.id}} == 101"
       ]
     }
   ]

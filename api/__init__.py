@@ -1,4 +1,5 @@
 import requests
+import json
 import filler
 
 VALID_HTTP_METHODS = {
@@ -16,11 +17,15 @@ def call(req, responses):
     method = req.get('method', None)
     url = filler.fill_regex(req['url'], responses)
     payload = req.get('data', None)
+    if payload is not None:
+        payload_clean = filler.fill_regex(payload, responses)
+        payload = json.loads(payload_clean)
     headers = None
 
     print('Calling {method} @ {url}'.format(method=method, url=url))
-
-    return requests.request(method=method, url=url, json=payload, headers=headers).json()
+    response = requests.request(method=method, url=url, json=payload, headers=headers).json()
+    print('Response', response)
+    return response
 
 
 # simple validation
