@@ -1,2 +1,5 @@
-# sts
-Simple Test Suite
+# Simple Test Suite
+> I was bored of being unable to test an entire application in one click
+
+Still a lot of WIP
+
