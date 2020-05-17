@@ -1,0 +1,60 @@
+{
+  "name": "Suite number 001",
+  "description": "A longer description of the incredible suite number 001",
+  "steps": [
+    {
+      "type": "HTTP",
+      "name": "Get Comment",
+      "description": "Get Comment with Id: 1",
+      "request": {
+        "url": "https://jsonplaceholder.typicode.com/comments/1",
+        "method": "GET",
+        "data": null
+      }
+    },
+    {
+      "type": "HTTP",
+      "name": "Get Post",
+      "description": "Get the post of the previous comment",
+      "request": {
+        "url": "https://jsonplaceholder.typicode.com/posts/{{0.postId}}",
+        "method": "GET",
+        "data": null
+      }
+    },
+    {
+      "type": "HTTP",
+      "name": "Get User",
+      "description": "Get the user that made the previous post",
+      "request": {
+        "url": "https://jsonplaceholder.typicode.com/users/{{1.userId}}",
+        "method": "GET",
+        "data": null
+      }
+    },
+    {
+      "type": "HTTP",
+      "name": "Add a Post",
+      "description": "Add a post just for fun",
+      "request": {
+        "url": "https://jsonplaceholder.typicode.com/posts/",
+        "method": "POST",
+        "data": {
+          "title": "A Test",
+          "body": "A body",
+          "userId": 1
+        }
+      }
+    },
+    {
+      "type": "ASSERT",
+      "name": "Final Check",
+      "description": "Check a bunch of stuff",
+      "checks": [
+        "'{{2.name}}' == 'Leanne Graham'",
+        "{{2.id}} == {{1.userId}}",
+        "{{3.title}} == 'A Test'"
+      ]
+    }
+  ]
+}
