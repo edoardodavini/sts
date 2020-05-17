@@ -1,0 +1,2 @@
+# sts
+Simple Test Suite
