@@ -1,0 +1,37 @@
+{
+  "name": "Suite number 002",
+  "description": "A longer description of the incredible suite number 001",
+  "config": {
+    "baseUrl": "http://localhost:5000/"
+  },
+  "steps": [
+    {
+      "type": "HTTP",
+      "name": "Get Users",
+      "description": "Get all Users",
+      "request": {
+        "url": "{{baseUrl}}/users",
+        "method": "GET",
+        "data": null
+      }
+    },
+    {
+      "type": "HTTP",
+      "name": "Get User by ID",
+      "description": "Get user with ID: 2",
+      "request": {
+        "url": "{{baseUrl}}/users/2",
+        "method": "GET",
+        "data": null
+      }
+    },
+    {
+      "type": "ASSERT",
+      "name": "Final Check",
+      "description": "Check a bunch of stuff",
+      "checks": [
+        "'{{1.username}}' == 'marco'"
+      ]
+    }
+  ]
+}
