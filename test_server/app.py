@@ -25,7 +25,7 @@ def index():
 
 @app.route('/users/<int:user_id>', methods=['GET'])
 def user_by_id(user_id):
-    user = list(filter(lambda x: x['id'] == user_id, get_users()))
+    user = list(filter(lambda x: x['id'] == user_id, get_users()))[0]
     return jsonify(user), 200
 
 
