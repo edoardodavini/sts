@@ -2,7 +2,7 @@
   "name": "Suite number 002",
   "description": "A longer description of the incredible suite number 001",
   "config": {
-    "baseUrl": "http://localhost:5000/"
+    "baseUrl": "http://localhost:5000"
   },
   "steps": [
     {

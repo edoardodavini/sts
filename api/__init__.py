@@ -12,10 +12,12 @@ VALID_HTTP_METHODS = {
 
 
 # http calls with string building:
-def call(req, responses):
+def call(req, responses, config = {}):
     validate_request(req)
+    base_url = config.get('baseUrl', '')
+
     method = req.get('method', None)
-    url = filler.fill_regex(req['url'], responses)
+    url = filler.fill_regex(req['url'].replace('{{baseUrl}}', base_url), responses)
     payload = req.get('data', None)
     if payload is not None:
         payload_clean = filler.fill_regex(payload, responses)
@@ -24,7 +26,7 @@ def call(req, responses):
 
     print('Calling {method} @ {url}'.format(method=method, url=url))
     response = requests.request(method=method, url=url, json=payload, headers=headers).json()
-    print('Response', response)
+    print('Response ({number}): {response}'.format(number=len(responses), response=json.dumps(response)))
     return response
 
 

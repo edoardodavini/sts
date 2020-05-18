@@ -15,6 +15,7 @@ def load_suites():
 
 def execute_suite(suite):
     print('Initializing suite: {}'.format(suite.get('name', 'unnamed suite')))
+    config = suite.get('config', {})
     steps = suite.get('steps', [])
     responses = []
     for step in steps:
@@ -23,7 +24,7 @@ def execute_suite(suite):
         step_desc = step.get('description', 'WARNING: MISSING DESCRIPTION')
         print('Testing {type}: {name} ({desc})'.format(type=step_type, name=step_name, desc=step_desc))
         if step_type == 'HTTP':
-            res = api.call(step['request'], responses)
+            res = api.call(step['request'], responses, config)
             responses.append(res)
         elif step_type == 'ASSERT':
             print('Assertion: ', step.get('checks'))
