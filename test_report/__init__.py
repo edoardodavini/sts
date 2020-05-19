@@ -25,7 +25,6 @@ def build_markdown_summary(destination, responses):
     assertions = list(filter(lambda x: x.get('type', 'ASSERT') == 'ASSERT', responses))[0]
 
     report += '''
-    
 * Total Tests: {total}
 * Passed Tests: {passed}
 * Failed Tests: {failed}
@@ -40,7 +39,7 @@ def build_markdown_summary(destination, responses):
     report += '''
 | Check | Filled Check | Test Result |
 | ------------ | --------- | ----- |
-    '''
+'''
 
     for result in assertions['results']:
         report += '| {check} | {filled} | {result} | \n'.format(
