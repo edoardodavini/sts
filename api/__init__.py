@@ -27,10 +27,16 @@ def call(req, responses, config = {}):
     print('Calling {method} @ {url}'.format(method=method, url=url))
     response_raw = requests.request(method=method, url=url, json=payload, headers=headers)
     response = {
-        "headers": response_raw.headers,
+        "type": "HTTP",
+        "headers": dict(response_raw.headers),
         "body": response_raw.text,
         "status": response_raw.status_code,
-        "request": response_raw.request
+        "request": {
+            "body": payload,
+            "headers": dict(response_raw.request.headers),
+            "method": response_raw.request.method,
+            "url": response_raw.request.url
+        }
     }
     try:
         response["json"] = response_raw.json()

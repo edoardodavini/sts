@@ -2,10 +2,25 @@ import filler
 
 
 def assertion(checks, responses):
-    checks_results = []
+    results = []
     for check in checks:
         filled_check = filler.fill_regex(check, responses)
         check_result = eval(filled_check)
-        print('check {0} >>> {1}'.format(check, check_result))
-        checks_results.append(check_result)
-    print('checks results', checks_results)
+        print(f'check {check} >>> {filled_check} : {check_result}')
+        results.append({
+            "check": check,
+            "filled_check": filled_check,
+            "result": check_result
+        })
+
+    checks_results = list(map(lambda x: x['result'], results))
+
+    return {
+        "type": "ASSERT",
+        "summary": {
+            "total": len(checks_results),
+            "passed": checks_results.count(True),
+            "failed": checks_results.count(False)
+        },
+        "results": results
+    }
