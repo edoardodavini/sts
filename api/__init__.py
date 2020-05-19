@@ -25,8 +25,19 @@ def call(req, responses, config = {}):
     headers = None
 
     print('Calling {method} @ {url}'.format(method=method, url=url))
-    response = requests.request(method=method, url=url, json=payload, headers=headers).json()
-    print('Response ({number}): {response}'.format(number=len(responses), response=json.dumps(response)))
+    response_raw = requests.request(method=method, url=url, json=payload, headers=headers)
+    response = {
+        "headers": response_raw.headers,
+        "body": response_raw.text,
+        "status": response_raw.status_code,
+        "request": response_raw.request
+    }
+    try:
+        response["json"] = response_raw.json()
+    except json.JSONDecodeError:
+        print('Unable to parse json response')
+        response["json"] = None
+    print('Response ({number}) {status}: {response}'.format(number=len(responses), status=response['status'], response=json.dumps(response.get('json', 'No Json Available'))))
     return response
 
 

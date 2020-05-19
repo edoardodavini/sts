@@ -26,11 +26,88 @@
       }
     },
     {
+      "type": "HTTP",
+      "name": "Add a New User",
+      "description": "Add a new user",
+      "request": {
+        "url": "{{baseUrl}}/users",
+        "method": "POST",
+        "data": "{\"username\": \"another\", \"name\": \"uno\", \"surname\": \"utente\", \"email\": \"another@utente.it\"}"
+      }
+    },
+    {
+      "type": "HTTP",
+      "name": "Get the New User",
+      "description": "Get the just added new user",
+      "request": {
+        "url": "{{baseUrl}}/users/{{2.json.id}}",
+        "method": "GET",
+        "data": null
+      }
+    },
+    {
+      "type": "HTTP",
+      "name": "Edit the new user",
+      "description": "Edit the newly added user",
+      "request": {
+        "url": "{{baseUrl}}/users/{{2.json.id}}",
+        "method": "PATCH",
+        "data": "{\"name\": \"due\", \"surname\": \"crazy surname\"}"
+      }
+    },
+    {
+      "type": "HTTP",
+      "name": "Get the Updated User",
+      "description": "Get the just updated user",
+      "request": {
+        "url": "{{baseUrl}}/users/{{4.json.id}}",
+        "method": "GET",
+        "data": null
+      }
+    },
+    {
+      "type": "HTTP",
+      "name": "Delete the new user",
+      "description": "Delete the added and modified user",
+      "request": {
+        "url": "{{baseUrl}}/users/{{4.json.id}}",
+        "method": "DELETE",
+        "data": null
+      }
+    },
+    {
+      "type": "HTTP",
+      "name": "Get the Deleted user",
+      "description": "Get the Deleted user",
+      "request": {
+        "url": "{{baseUrl}}/users/{{4.json.id}}",
+        "method": "GET",
+        "data": null
+      }
+    },
+    {
       "type": "ASSERT",
       "name": "Final Check",
       "description": "Check a bunch of stuff",
       "checks": [
-        "'{{1.username}}' == 'marco'"
+        "'{{1.json.username}}' == 'marco'",
+        "{{2.status}} == 200",
+        "{{2.status}} == 201",
+        "200 <= {{2.status}} <= 300",
+        "{{3.json}} == {{2.json}}",
+        "'{{3.json.username}}' == '{{2.json.username}}'",
+        "'{{3.json.surname}}' == '{{2.json.surname}}'",
+        "{{4.status}} == 200",
+        "200 <= {{4.status}} <= 300",
+        "'{{4.json.surname}}' != '{{3.json.surname}}'",
+        "'{{3.json.name}}' != '{{4.json.name}}'",
+        "'{{4.json.surname}}' == 'crazy surname'",
+        "{{5.status}} == 200",
+        "'{{5.json.surname}}' == 'crazy surname'",
+        "'{{5.json.name}}' == '{{4.json.name}}'",
+        "'{{5.json.name}}' != '{{3.json.name}}'",
+        "{{6.status}} == 200",
+        "{{7.status}} == 404"
       ]
     }
   ]
