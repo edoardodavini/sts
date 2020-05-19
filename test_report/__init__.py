@@ -45,7 +45,7 @@ def build_markdown_summary(destination, responses):
         report += '| {check} | {filled} | {result} | \n'.format(
             check=result['check'],
             filled=result['filled_check'],
-            result='&#x2611;' if result['result'] else '&#x2612;'
+            result='&#x2714;' if result['result'] else '&#x2716;'
         )
 
     open(destination, 'w+').write(report)
