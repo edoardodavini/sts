@@ -1,0 +1,238 @@
+[
+    {
+        "type": "HTTP",
+        "headers": {
+            "Date": "Tue, 19 May 2020 18:08:13 GMT",
+            "Content-Type": "application/json; charset=utf-8",
+            "Transfer-Encoding": "chunked",
+            "Connection": "keep-alive",
+            "Set-Cookie": "__cfduid=dc6316db5bbcbe9118f8c56508e72cfb11589911688; expires=Thu, 18-Jun-20 18:08:08 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
+            "X-Powered-By": "Express",
+            "Vary": "Origin, Accept-Encoding",
+            "Access-Control-Allow-Credentials": "true",
+            "Cache-Control": "max-age=14400",
+            "Pragma": "no-cache",
+            "Expires": "-1",
+            "X-Content-Type-Options": "nosniff",
+            "Etag": "W/\"10c-KJ4I9RM/+33TKdV8CFsIvqsDSP0\"",
+            "Via": "1.1 vegur",
+            "CF-Cache-Status": "REVALIDATED",
+            "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+            "Server": "cloudflare",
+            "CF-RAY": "595fc2f5dc6f6f10-FCO",
+            "Content-Encoding": "gzip",
+            "cf-request-id": "02cfb82da200006f10eb15b200000001"
+        },
+        "body": "{\n  \"postId\": 1,\n  \"id\": 1,\n  \"name\": \"id labore ex et quam laborum\",\n  \"email\": \"Eliseo@gardner.biz\",\n  \"body\": \"laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium\"\n}",
+        "status": 200,
+        "request": {
+            "body": null,
+            "headers": {
+                "User-Agent": "python-requests/2.23.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive"
+            },
+            "method": "GET",
+            "url": "https://jsonplaceholder.typicode.com/comments/1"
+        },
+        "json": {
+            "postId": 1,
+            "id": 1,
+            "name": "id labore ex et quam laborum",
+            "email": "Eliseo@gardner.biz",
+            "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
+        }
+    },
+    {
+        "type": "HTTP",
+        "headers": {
+            "Date": "Tue, 19 May 2020 18:08:17 GMT",
+            "Content-Type": "application/json; charset=utf-8",
+            "Transfer-Encoding": "chunked",
+            "Connection": "keep-alive",
+            "Set-Cookie": "__cfduid=d4f042398ea920f639e1e1049804d442f1589911693; expires=Thu, 18-Jun-20 18:08:13 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
+            "X-Powered-By": "Express",
+            "Vary": "Origin, Accept-Encoding",
+            "Access-Control-Allow-Credentials": "true",
+            "Cache-Control": "max-age=14400",
+            "Pragma": "no-cache",
+            "Expires": "-1",
+            "X-Content-Type-Options": "nosniff",
+            "Etag": "W/\"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU\"",
+            "Via": "1.1 vegur",
+            "CF-Cache-Status": "REVALIDATED",
+            "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+            "Server": "cloudflare",
+            "CF-RAY": "595fc316cfb3fc79-FCO",
+            "Content-Encoding": "gzip",
+            "cf-request-id": "02cfb842410000fc794182e200000001"
+        },
+        "body": "{\n  \"userId\": 1,\n  \"id\": 1,\n  \"title\": \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\",\n  \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\n}",
+        "status": 200,
+        "request": {
+            "body": null,
+            "headers": {
+                "User-Agent": "python-requests/2.23.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive"
+            },
+            "method": "GET",
+            "url": "https://jsonplaceholder.typicode.com/posts/1"
+        },
+        "json": {
+            "userId": 1,
+            "id": 1,
+            "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+            "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+        }
+    },
+    {
+        "type": "HTTP",
+        "headers": {
+            "Date": "Tue, 19 May 2020 18:08:24 GMT",
+            "Content-Type": "application/json; charset=utf-8",
+            "Transfer-Encoding": "chunked",
+            "Connection": "keep-alive",
+            "Set-Cookie": "__cfduid=d274cc2d47644fa9a6412482035733be01589911698; expires=Thu, 18-Jun-20 18:08:18 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
+            "X-Powered-By": "Express",
+            "Vary": "Origin, Accept-Encoding",
+            "Access-Control-Allow-Credentials": "true",
+            "Cache-Control": "max-age=14400",
+            "Pragma": "no-cache",
+            "Expires": "-1",
+            "X-Content-Type-Options": "nosniff",
+            "Etag": "W/\"1fd-+2Y3G3w049iSZtw5t1mzSnunngE\"",
+            "Via": "1.1 vegur",
+            "CF-Cache-Status": "REVALIDATED",
+            "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+            "Server": "cloudflare",
+            "CF-RAY": "595fc330ee9c6f46-FCO",
+            "Content-Encoding": "gzip",
+            "cf-request-id": "02cfb8528d00006f466134f200000001"
+        },
+        "body": "{\n  \"id\": 1,\n  \"name\": \"Leanne Graham\",\n  \"username\": \"Bret\",\n  \"email\": \"Sincere@april.biz\",\n  \"address\": {\n    \"street\": \"Kulas Light\",\n    \"suite\": \"Apt. 556\",\n    \"city\": \"Gwenborough\",\n    \"zipcode\": \"92998-3874\",\n    \"geo\": {\n      \"lat\": \"-37.3159\",\n      \"lng\": \"81.1496\"\n    }\n  },\n  \"phone\": \"1-770-736-8031 x56442\",\n  \"website\": \"hildegard.org\",\n  \"company\": {\n    \"name\": \"Romaguera-Crona\",\n    \"catchPhrase\": \"Multi-layered client-server neural-net\",\n    \"bs\": \"harness real-time e-markets\"\n  }\n}",
+        "status": 200,
+        "request": {
+            "body": null,
+            "headers": {
+                "User-Agent": "python-requests/2.23.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive"
+            },
+            "method": "GET",
+            "url": "https://jsonplaceholder.typicode.com/users/1"
+        },
+        "json": {
+            "id": 1,
+            "name": "Leanne Graham",
+            "username": "Bret",
+            "email": "Sincere@april.biz",
+            "address": {
+                "street": "Kulas Light",
+                "suite": "Apt. 556",
+                "city": "Gwenborough",
+                "zipcode": "92998-3874",
+                "geo": {
+                    "lat": "-37.3159",
+                    "lng": "81.1496"
+                }
+            },
+            "phone": "1-770-736-8031 x56442",
+            "website": "hildegard.org",
+            "company": {
+                "name": "Romaguera-Crona",
+                "catchPhrase": "Multi-layered client-server neural-net",
+                "bs": "harness real-time e-markets"
+            }
+        }
+    },
+    {
+        "type": "HTTP",
+        "headers": {
+            "Date": "Tue, 19 May 2020 18:08:27 GMT",
+            "Content-Type": "application/json; charset=utf-8",
+            "Content-Length": "153",
+            "Connection": "keep-alive",
+            "Set-Cookie": "__cfduid=dc4949382002ca762b7d29b77ca8f15dd1589911704; expires=Thu, 18-Jun-20 18:08:24 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
+            "X-Powered-By": "Express",
+            "Vary": "Origin, X-HTTP-Method-Override, Accept-Encoding",
+            "Access-Control-Allow-Credentials": "true",
+            "Cache-Control": "no-cache",
+            "Pragma": "no-cache",
+            "Expires": "-1",
+            "Access-Control-Expose-Headers": "Location",
+            "Location": "http://jsonplaceholder.typicode.com/posts//101",
+            "X-Content-Type-Options": "nosniff",
+            "Etag": "W/\"99-sKa67N4Cwa0yLFE1RkuFGsaDSNw\"",
+            "Via": "1.1 vegur",
+            "CF-Cache-Status": "DYNAMIC",
+            "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+            "Server": "cloudflare",
+            "CF-RAY": "595fc35a9a96cd1e-FCO",
+            "cf-request-id": "02cfb86c9c0000cd1e65296200000001"
+        },
+        "body": "{\n  \"title\": \"A Test\",\n  \"body\": \"A body created by Leanne Graham (Bret) with email Sincere@april.biz @ -37.3159 | 81.1496\",\n  \"userId\": 1,\n  \"id\": 101\n}",
+        "status": 201,
+        "request": {
+            "body": {
+                "title": "A Test",
+                "body": "A body created by Leanne Graham (Bret) with email Sincere@april.biz @ -37.3159 | 81.1496",
+                "userId": 1
+            },
+            "headers": {
+                "User-Agent": "python-requests/2.23.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Length": "132",
+                "Content-Type": "application/json"
+            },
+            "method": "POST",
+            "url": "https://jsonplaceholder.typicode.com/posts/"
+        },
+        "json": {
+            "title": "A Test",
+            "body": "A body created by Leanne Graham (Bret) with email Sincere@april.biz @ -37.3159 | 81.1496",
+            "userId": 1,
+            "id": 101
+        }
+    },
+    {
+        "type": "ASSERT",
+        "summary": {
+            "total": 5,
+            "passed": 5,
+            "failed": 0
+        },
+        "results": [
+            {
+                "check": "'{{2.json.name}}' == 'Leanne Graham'",
+                "filled_check": "'Leanne Graham' == 'Leanne Graham'",
+                "result": true
+            },
+            {
+                "check": "{{2.json.id}} == {{1.json.userId}}",
+                "filled_check": "1 == 1",
+                "result": true
+            },
+            {
+                "check": "'{{3.json.title}}' == 'A Test'",
+                "filled_check": "'A Test' == 'A Test'",
+                "result": true
+            },
+            {
+                "check": "{{3.json.userId}} == {{1.json.userId}} == {{2.json.id}}",
+                "filled_check": "1 == 1 == 1",
+                "result": true
+            },
+            {
+                "check": "{{3.json.id}} == 101",
+                "filled_check": "101 == 101",
+                "result": true
+            }
+        ]
+    }
+]
