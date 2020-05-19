@@ -20,7 +20,7 @@
       "name": "Get Post",
       "description": "Get the post of the previous comment",
       "request": {
-        "url": "{{baseUrl}}/posts/{{0.postId}}",
+        "url": "{{baseUrl}}/posts/{{0.json.postId}}",
         "method": "GET",
         "data": null
       }
@@ -30,7 +30,7 @@
       "name": "Get User",
       "description": "Get the user that made the previous post",
       "request": {
-        "url": "{{baseUrl}}/users/{{1.userId}}",
+        "url": "{{baseUrl}}/users/{{1.json.userId}}",
         "method": "GET",
         "data": null
       }
@@ -42,7 +42,7 @@
       "request": {
         "url": "{{baseUrl}}/posts/",
         "method": "POST",
-        "data": "{\"title\": \"A Test\", \"body\": \"A body created by {{2.name}} ({{2.username}}) with email {{2.email}} @ {{2.address.geo.lat}} | {{2.address.geo.lng}}\", \"userId\": {{2.id}}}"
+        "data": "{\"title\": \"A Test\", \"body\": \"A body created by {{2.json.name}} ({{2.json.username}}) with email {{2.json.email}} @ {{2.json.address.geo.lat}} | {{2.json.address.geo.lng}}\", \"userId\": {{2.json.id}}}"
       }
     },
     {
@@ -50,11 +50,11 @@
       "name": "Final Check",
       "description": "Check a bunch of stuff",
       "checks": [
-        "'{{2.name}}' == 'Leanne Graham'",
-        "{{2.id}} == {{1.userId}}",
-        "'{{3.title}}' == 'A Test'",
-        "{{3.userId}} == {{1.userId}} == {{2.id}}",
-        "{{3.id}} == 101"
+        "'{{2.json.name}}' == 'Leanne Graham'",
+        "{{2.json.id}} == {{1.json.userId}}",
+        "'{{3.json.title}}' == 'A Test'",
+        "{{3.json.userId}} == {{1.json.userId}} == {{2.json.id}}",
+        "{{3.json.id}} == 101"
       ]
     }
   ]
