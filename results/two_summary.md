@@ -1,7 +1,6 @@
 
 # API Report results
     
-    
 * Total Tests: 18
 * Passed Tests: 16
 * Failed Tests: 2
@@ -9,7 +8,7 @@
     
 | Check | Filled Check | Test Result |
 | ------------ | --------- | ----- |
-    | '{{1.json.username}}' == 'marco' | 'marco' == 'marco' | &#x2611; | 
+| '{{1.json.username}}' == 'marco' | 'marco' == 'marco' | &#x2611; | 
 | {{2.status}} == 200 | 201 == 200 | &#x2612; | 
 | {{2.status}} == 201 | 201 == 201 | &#x2611; | 
 | 200 <= {{2.status}} <= 300 | 200 <= 201 <= 300 | &#x2611; | 
