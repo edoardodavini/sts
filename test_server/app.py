@@ -51,16 +51,42 @@ def add_user():
     users.append(user)
 
     update_file(users)
-    return jsonify({'user': user}), 201
+    return jsonify(user), 201
+
+
+@app.route('/users/<int:user_id>', methods=['PATCH'])
+def update_user(user_id):
+    if not request.json or user_id is None:
+        abort(400)
+    users = get_users()
+    user = list(filter(lambda x: x['id'] == user_id, users))[0]
+    index = users.index(user)
+
+    new_username = request.json.get('username', None)
+    new_name = request.json.get('name', None)
+    new_surname = request.json.get('surname', None)
+    new_email = request.json.get('email', None)
+
+    if new_username:
+        users[index]['username'] = new_username
+    if new_name:
+        users[index]['name'] = new_name
+    if new_surname:
+        users[index]['surname'] = new_surname
+    if new_email:
+        users[index]['email'] = new_email
+
+    update_file(users)
+    return jsonify(users[index]), 200
 
 
 @app.route('/users/<int:user_id>', methods=['DELETE'])
 def delete_user_by_id(user_id):
     users = get_users()
-    user = list(filter(lambda x: x['id'] == user_id, users))
+    user = list(filter(lambda x: x['id'] == user_id, users))[0]
     users.remove(user)
     update_file(users)
-    return jsonify({'user': user}), 200
+    return jsonify(user), 200
 
 
 if __name__ == '__main__':
