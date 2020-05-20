@@ -4,7 +4,7 @@ import api
 import assertion
 import test_report
 
-ROOT = 'sts/'
+ROOT = ''
 ROOT_SUITE = ROOT + 'suites/'
 ROOT_RESULT = ROOT + 'results/'
 
