@@ -24,7 +24,7 @@ checking that every step is doing what you would expect?
 And what if you want these steps to be completely described by a **single file**?  
 And what if you want those files to be placed in a *Repository* and maintained easily?
 
-## Run it on your 
+## Test it now!
 
 1. Clone this repo: `git clone https://github.com/edavini/sts.git`
 2. Navigate into the newly created folder: `cd sts`
@@ -215,14 +215,18 @@ This process generates 2 different reports:
 An example of a Summary Report is available [here](results/two_summary.md)
 
 ## To be done / next steps
-* Add support for multiple checks (right now only one check is used for the report)
 * Add support for headers in the request object
 * Add support for login-interceptors
 * Add documentation for Placeholder
 * Better error handling
+* Add MOCK step type, for mocked data just to be verified in the next steps
 * Test more checks, like usage of functions, including filters and map
 * more stuff
 
 ## Full Example for reference
 
 Check updated references in the [Suites](blob/master/suites/) directory
+
+## Contribute
+
+Feel free to join this project. This was born to meet the need of a pre-defined tests suite.
