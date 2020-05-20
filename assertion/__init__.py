@@ -1,7 +1,8 @@
 import filler
 
 
-def assertion(checks, responses):
+def assertion(step, responses):
+    checks = step.get('checks')
     results = []
     for check in checks:
         filled_check = filler.fill_regex(check, responses)
@@ -17,6 +18,8 @@ def assertion(checks, responses):
 
     return {
         "type": "ASSERT",
+        "name": step.get("name", "unnamed Assertion"),
+        "description": step.get("name", "Undescribed Assertion"),
         "summary": {
             "total": len(checks_results),
             "passed": checks_results.count(True),

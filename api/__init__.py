@@ -12,7 +12,8 @@ VALID_HTTP_METHODS = {
 
 
 # http calls with string building:
-def call(req, responses, config = {}):
+def call(step, responses, config={}):
+    req = step.get('request')
     validate_request(req)
     base_url = config.get('baseUrl', '')
 
@@ -28,6 +29,8 @@ def call(req, responses, config = {}):
     response_raw = requests.request(method=method, url=url, json=payload, headers=headers)
     response = {
         "type": "HTTP",
+        "name": step.get("name", "Unnamed Request"),
+        "description": step.get("name", "Undescribed Request"),
         "headers": dict(response_raw.headers),
         "body": response_raw.text,
         "status": response_raw.status_code,

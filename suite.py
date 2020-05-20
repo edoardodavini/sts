@@ -37,11 +37,10 @@ def execute_suite(suite):
             desc=step_desc)
         )
         if step_type == 'HTTP':
-            res = api.call(step['request'], responses, config)
+            res = api.call(step, responses, config)
             responses.append(res)
         elif step_type == 'ASSERT':
-            print('Assertion: ', step.get('checks'))
-            responses.append(assertion.assertion(step.get('checks'), responses))
+            responses.append(assertion.assertion(step, responses))
 
     test_report.build_report(responses, suite, ROOT_RESULT)
 
