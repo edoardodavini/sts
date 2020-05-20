@@ -212,7 +212,7 @@ This process generates 2 different reports:
 * a `raw_report` available as a `json` with all the information gathered during the test execution
 * a `summary` available as a `markdown` with a small summary of how well the test went
 
-An example of a Summary Report is available [here](blob/master/results/two_summary.md)
+An example of a Summary Report is available [here](results/two_summary.md)
 
 ## To be done / next steps
 * Add support for multiple checks (right now only one check is used for the report)
