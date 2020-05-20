@@ -2,11 +2,11 @@
     {
         "type": "HTTP",
         "headers": {
-            "Date": "Wed, 20 May 2020 08:24:21 GMT",
+            "Date": "Wed, 20 May 2020 10:47:45 GMT",
             "Content-Type": "application/json; charset=utf-8",
             "Transfer-Encoding": "chunked",
             "Connection": "keep-alive",
-            "Set-Cookie": "__cfduid=d26806e750cc620f8dfd30d72ffc0027b1589963061; expires=Fri, 19-Jun-20 08:24:21 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
+            "Set-Cookie": "__cfduid=d6002eadefc506a13e9ed89cc458644521589971665; expires=Fri, 19-Jun-20 10:47:45 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
             "X-Powered-By": "Express",
             "Vary": "Origin, Accept-Encoding",
             "Access-Control-Allow-Credentials": "true",
@@ -17,19 +17,19 @@
             "Etag": "W/\"10c-KJ4I9RM/+33TKdV8CFsIvqsDSP0\"",
             "Via": "1.1 vegur",
             "CF-Cache-Status": "HIT",
-            "Age": "493",
+            "Age": "434",
             "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
             "Server": "cloudflare",
-            "CF-RAY": "5964a92c5f6d0f62-MXP",
+            "CF-RAY": "59657b3c7e7e083f-CDG",
             "Content-Encoding": "gzip",
-            "cf-request-id": "02d2c80fb400000f62a180a200000001"
+            "cf-request-id": "02d34b59c90000083ff7198200000001"
         },
         "body": "{\n  \"postId\": 1,\n  \"id\": 1,\n  \"name\": \"id labore ex et quam laborum\",\n  \"email\": \"Eliseo@gardner.biz\",\n  \"body\": \"laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium\"\n}",
         "status": 200,
         "request": {
             "body": null,
             "headers": {
-                "User-Agent": "python-requests/2.22.0",
+                "User-Agent": "python-requests/2.23.0",
                 "Accept-Encoding": "gzip, deflate",
                 "Accept": "*/*",
                 "Connection": "keep-alive"
@@ -48,11 +48,11 @@
     {
         "type": "HTTP",
         "headers": {
-            "Date": "Wed, 20 May 2020 08:24:21 GMT",
+            "Date": "Wed, 20 May 2020 10:47:45 GMT",
             "Content-Type": "application/json; charset=utf-8",
             "Transfer-Encoding": "chunked",
             "Connection": "keep-alive",
-            "Set-Cookie": "__cfduid=d117e80c0149091effaae0127636313e01589963061; expires=Fri, 19-Jun-20 08:24:21 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
+            "Set-Cookie": "__cfduid=dec6a76fa35d2a649256f2f64a4f9f61b1589971665; expires=Fri, 19-Jun-20 10:47:45 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
             "X-Powered-By": "Express",
             "Vary": "Origin, Accept-Encoding",
             "Access-Control-Allow-Credentials": "true",
@@ -63,19 +63,19 @@
             "Etag": "W/\"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU\"",
             "Via": "1.1 vegur",
             "CF-Cache-Status": "HIT",
-            "Age": "6684",
+            "Age": "4628",
             "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
             "Server": "cloudflare",
-            "CF-RAY": "5964a92cde6f0f7a-MXP",
+            "CF-RAY": "59657b3d2ba3ee48-CDG",
             "Content-Encoding": "gzip",
-            "cf-request-id": "02d2c8100600000f7a2abaf200000001"
+            "cf-request-id": "02d34b5a340000ee48a685e200000001"
         },
         "body": "{\n  \"userId\": 1,\n  \"id\": 1,\n  \"title\": \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\",\n  \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\n}",
         "status": 200,
         "request": {
             "body": null,
             "headers": {
-                "User-Agent": "python-requests/2.22.0",
+                "User-Agent": "python-requests/2.23.0",
                 "Accept-Encoding": "gzip, deflate",
                 "Accept": "*/*",
                 "Connection": "keep-alive"
@@ -93,11 +93,11 @@
     {
         "type": "HTTP",
         "headers": {
-            "Date": "Wed, 20 May 2020 08:24:21 GMT",
+            "Date": "Wed, 20 May 2020 10:47:45 GMT",
             "Content-Type": "application/json; charset=utf-8",
             "Transfer-Encoding": "chunked",
             "Connection": "keep-alive",
-            "Set-Cookie": "__cfduid=df9f7c932cd9c22f365085f186456a5d81589963061; expires=Fri, 19-Jun-20 08:24:21 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
+            "Set-Cookie": "__cfduid=d1a9a6a5bd89db737f922f124c15d8ee41589971665; expires=Fri, 19-Jun-20 10:47:45 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
             "X-Powered-By": "Express",
             "Vary": "Origin, Accept-Encoding",
             "Access-Control-Allow-Credentials": "true",
@@ -108,19 +108,19 @@
             "Etag": "W/\"1fd-+2Y3G3w049iSZtw5t1mzSnunngE\"",
             "Via": "1.1 vegur",
             "CF-Cache-Status": "HIT",
-            "Age": "2140",
+            "Age": "1738",
             "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
             "Server": "cloudflare",
-            "CF-RAY": "5964a92d8d2d0e26-MXP",
+            "CF-RAY": "59657b3dce610863-CDG",
             "Content-Encoding": "gzip",
-            "cf-request-id": "02d2c8107600000e2670aba200000001"
+            "cf-request-id": "02d34b5a9b0000086388aa8200000001"
         },
         "body": "{\n  \"id\": 1,\n  \"name\": \"Leanne Graham\",\n  \"username\": \"Bret\",\n  \"email\": \"Sincere@april.biz\",\n  \"address\": {\n    \"street\": \"Kulas Light\",\n    \"suite\": \"Apt. 556\",\n    \"city\": \"Gwenborough\",\n    \"zipcode\": \"92998-3874\",\n    \"geo\": {\n      \"lat\": \"-37.3159\",\n      \"lng\": \"81.1496\"\n    }\n  },\n  \"phone\": \"1-770-736-8031 x56442\",\n  \"website\": \"hildegard.org\",\n  \"company\": {\n    \"name\": \"Romaguera-Crona\",\n    \"catchPhrase\": \"Multi-layered client-server neural-net\",\n    \"bs\": \"harness real-time e-markets\"\n  }\n}",
         "status": 200,
         "request": {
             "body": null,
             "headers": {
-                "User-Agent": "python-requests/2.22.0",
+                "User-Agent": "python-requests/2.23.0",
                 "Accept-Encoding": "gzip, deflate",
                 "Accept": "*/*",
                 "Connection": "keep-alive"
@@ -155,11 +155,11 @@
     {
         "type": "HTTP",
         "headers": {
-            "Date": "Wed, 20 May 2020 08:24:45 GMT",
+            "Date": "Wed, 20 May 2020 10:47:52 GMT",
             "Content-Type": "application/json; charset=utf-8",
             "Content-Length": "153",
             "Connection": "keep-alive",
-            "Set-Cookie": "__cfduid=d21aa3758cf48fa17b8f66662bf4db4f41589963061; expires=Fri, 19-Jun-20 08:24:21 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
+            "Set-Cookie": "__cfduid=d957c0f577fb977106c561618186c9df91589971665; expires=Fri, 19-Jun-20 10:47:45 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
             "X-Powered-By": "Express",
             "Vary": "Origin, X-HTTP-Method-Override, Accept-Encoding",
             "Access-Control-Allow-Credentials": "true",
@@ -174,8 +174,8 @@
             "CF-Cache-Status": "DYNAMIC",
             "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
             "Server": "cloudflare",
-            "CF-RAY": "5964a92e0e3ef937-MXP",
-            "cf-request-id": "02d2c810c00000f93703872200000001"
+            "CF-RAY": "59657b3e887ea873-CDG",
+            "cf-request-id": "02d34b5b170000a873d9807200000001"
         },
         "body": "{\n  \"title\": \"A Test\",\n  \"body\": \"A body created by Leanne Graham (Bret) with email Sincere@april.biz @ -37.3159 | 81.1496\",\n  \"userId\": 1,\n  \"id\": 101\n}",
         "status": 201,
@@ -186,7 +186,7 @@
                 "userId": 1
             },
             "headers": {
-                "User-Agent": "python-requests/2.22.0",
+                "User-Agent": "python-requests/2.23.0",
                 "Accept-Encoding": "gzip, deflate",
                 "Accept": "*/*",
                 "Connection": "keep-alive",
