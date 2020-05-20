@@ -28,7 +28,7 @@ def build_markdown_summary(destination, responses):
 * Total Tests: {total}
 * Passed Tests: {passed}
 * Failed Tests: {failed}
-* Percentage: {percentage}
+* Percentage: **{percentage}**
     '''.format(
         total=assertions['summary']['total'],
         passed=assertions['summary']['passed'],

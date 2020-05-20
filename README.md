@@ -24,16 +24,18 @@ checking that every step is doing what you would expect?
 And what if you want these steps to be completely described by a **single file**?  
 And what if you want those files to be placed in a *Repository* and maintained easily?
 
-## Test it right away
+## Run it on your 
 
 1. Clone this repo: `git clone https://github.com/edavini/sts.git`
 2. Navigate into the newly created folder: `cd sts`
-3. Run the *local server* (for testing purpose only):
+3. Run the *local server* (OPTIONAL: for testing purpose only):
     1. Install `flask` dependency: `pip install flask`
     2. Run the `flask` server: `python test_server/app.py`
+    3. If you don't want to execute this step, just delete the `two.json` suite in the `suite` folder
 4. Run the *suites tester* (in a different shell/prompt): `python suite.py`
 
-You should get a lot of test executed.
+You should get a lot of test executed. Seeing both requests, responses and the checks being done
+You'll be able to find the report generated in the `results` folder
 
 
 ## How it works
@@ -134,7 +136,6 @@ A Request Example: a POST with a 2 placeholders in the body (data)
 ```
 
 ##### The request's Response
-The 
 
 | Property | Description | Example |
 |----------|-------------|--------------|
@@ -200,12 +201,25 @@ Those functions are the one tested right now:
 
 
 ## Placeholders
+Placeholders are as easy as possible:  
+`{{x.this.is.a.nested.path}}`
+* The double brackets are used to identify inside a string. 
+* `x` is always an integer, representing the array index of the responses (so it starts from 0)
+* `this.is.a.nested.path` is the nested path of the object of the response. 
 
+## The results
+This process generates 2 different reports: 
+* a `raw_report` available as a `json` with all the information gathered during the test execution
+* a `summary` available as a `markdown` with a small summary of how well the test went
+
+An example of a Summary Report is available [here](blob/master/results/two_summary.md)
 
 ## To be done / next steps
 * Add support for multiple checks (right now only one check is used for the report)
 * Add support for headers in the request object
 * Add support for login-interceptors
+* Add documentation for Placeholder
+* Better error handling
 * Test more checks, like usage of functions, including filters and map
 * more stuff
 
