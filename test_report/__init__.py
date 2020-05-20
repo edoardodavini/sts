@@ -24,20 +24,28 @@ def build_markdown_summary(destination, responses):
     # TODO: HANDLE MULTIPLE ASSERTION STEPS
     assertions = list(filter(lambda x: x.get('type', 'ASSERT') == 'ASSERT', responses))[0]
 
+    percentage = round(assertions['summary']['passed'] * 100 / assertions['summary']['total'], 2)
+
     report += '''
 * Total Tests: {total}
 * Passed Tests: {passed}
 * Failed Tests: {failed}
-* Percentage: **{percentage}**
-    '''.format(
+* Percentage: **{percentage}**  '''.format(
         total=assertions['summary']['total'],
         passed=assertions['summary']['passed'],
         failed=assertions['summary']['failed'],
-        percentage=str(round(assertions['summary']['passed'] * 100 / assertions['summary']['total'], 2)) + '%'
+        percentage=str(percentage) + '%'
     )
 
+    for i in range(assertions['summary']['total']):
+        if i < assertions['summary']['passed']:
+            report += ':green_square:'
+        else:
+            report += ':red_square:'
+
     report += '''
-| Check | Filled Check | Test Result |
+
+| Check | Filled Check | Result |
 | ------------ | --------- | ----- |
 '''
 
@@ -45,7 +53,8 @@ def build_markdown_summary(destination, responses):
         report += '| {check} | {filled} | {result} | \n'.format(
             check=result['check'],
             filled=result['filled_check'],
-            result='&#x2714;' if result['result'] else '&#x2716;'
+            # result='&#x2714;' if result['result'] else '&#x2716;'
+            result=':heavy_check_mark:' if result['result'] else ':x:'
         )
 
     open(destination, 'w+').write(report)
