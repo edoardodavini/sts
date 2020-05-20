@@ -1,12 +1,14 @@
 [
     {
         "type": "HTTP",
+        "name": "Get Comment",
+        "description": "Get Comment",
         "headers": {
-            "Date": "Wed, 20 May 2020 10:47:45 GMT",
+            "Date": "Wed, 20 May 2020 17:16:04 GMT",
             "Content-Type": "application/json; charset=utf-8",
             "Transfer-Encoding": "chunked",
             "Connection": "keep-alive",
-            "Set-Cookie": "__cfduid=d6002eadefc506a13e9ed89cc458644521589971665; expires=Fri, 19-Jun-20 10:47:45 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
+            "Set-Cookie": "__cfduid=d92f76af31da66a991b441eb6dbde94701589994964; expires=Fri, 19-Jun-20 17:16:04 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
             "X-Powered-By": "Express",
             "Vary": "Origin, Accept-Encoding",
             "Access-Control-Allow-Credentials": "true",
@@ -17,12 +19,12 @@
             "Etag": "W/\"10c-KJ4I9RM/+33TKdV8CFsIvqsDSP0\"",
             "Via": "1.1 vegur",
             "CF-Cache-Status": "HIT",
-            "Age": "434",
+            "Age": "285",
             "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
             "Server": "cloudflare",
-            "CF-RAY": "59657b3c7e7e083f-CDG",
+            "CF-RAY": "5967b40d1ccfd610-MXP",
             "Content-Encoding": "gzip",
-            "cf-request-id": "02d34b59c90000083ff7198200000001"
+            "cf-request-id": "02d4aedc2e0000d610ed208200000001"
         },
         "body": "{\n  \"postId\": 1,\n  \"id\": 1,\n  \"name\": \"id labore ex et quam laborum\",\n  \"email\": \"Eliseo@gardner.biz\",\n  \"body\": \"laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium\"\n}",
         "status": 200,
@@ -47,12 +49,14 @@
     },
     {
         "type": "HTTP",
+        "name": "Get Post",
+        "description": "Get Post",
         "headers": {
-            "Date": "Wed, 20 May 2020 10:47:45 GMT",
+            "Date": "Wed, 20 May 2020 17:16:04 GMT",
             "Content-Type": "application/json; charset=utf-8",
             "Transfer-Encoding": "chunked",
             "Connection": "keep-alive",
-            "Set-Cookie": "__cfduid=dec6a76fa35d2a649256f2f64a4f9f61b1589971665; expires=Fri, 19-Jun-20 10:47:45 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
+            "Set-Cookie": "__cfduid=d571f0bc53b8618d68242ecec0352adb21589994964; expires=Fri, 19-Jun-20 17:16:04 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
             "X-Powered-By": "Express",
             "Vary": "Origin, Accept-Encoding",
             "Access-Control-Allow-Credentials": "true",
@@ -63,12 +67,12 @@
             "Etag": "W/\"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU\"",
             "Via": "1.1 vegur",
             "CF-Cache-Status": "HIT",
-            "Age": "4628",
+            "Age": "172",
             "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
             "Server": "cloudflare",
-            "CF-RAY": "59657b3d2ba3ee48-CDG",
+            "CF-RAY": "5967b40d8d1b0e26-MXP",
             "Content-Encoding": "gzip",
-            "cf-request-id": "02d34b5a340000ee48a685e200000001"
+            "cf-request-id": "02d4aedc7900000e2657bb7200000001"
         },
         "body": "{\n  \"userId\": 1,\n  \"id\": 1,\n  \"title\": \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\",\n  \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\n}",
         "status": 200,
@@ -92,12 +96,14 @@
     },
     {
         "type": "HTTP",
+        "name": "Get User",
+        "description": "Get User",
         "headers": {
-            "Date": "Wed, 20 May 2020 10:47:45 GMT",
+            "Date": "Wed, 20 May 2020 17:16:04 GMT",
             "Content-Type": "application/json; charset=utf-8",
             "Transfer-Encoding": "chunked",
             "Connection": "keep-alive",
-            "Set-Cookie": "__cfduid=d1a9a6a5bd89db737f922f124c15d8ee41589971665; expires=Fri, 19-Jun-20 10:47:45 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
+            "Set-Cookie": "__cfduid=d0fd0f6dd3ba8747b1c16b9a9100a675f1589994964; expires=Fri, 19-Jun-20 17:16:04 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
             "X-Powered-By": "Express",
             "Vary": "Origin, Accept-Encoding",
             "Access-Control-Allow-Credentials": "true",
@@ -108,12 +114,12 @@
             "Etag": "W/\"1fd-+2Y3G3w049iSZtw5t1mzSnunngE\"",
             "Via": "1.1 vegur",
             "CF-Cache-Status": "HIT",
-            "Age": "1738",
+            "Age": "54",
             "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
             "Server": "cloudflare",
-            "CF-RAY": "59657b3dce610863-CDG",
+            "CF-RAY": "5967b40def04f913-MXP",
             "Content-Encoding": "gzip",
-            "cf-request-id": "02d34b5a9b0000086388aa8200000001"
+            "cf-request-id": "02d4aedcb20000f913c28cd200000001"
         },
         "body": "{\n  \"id\": 1,\n  \"name\": \"Leanne Graham\",\n  \"username\": \"Bret\",\n  \"email\": \"Sincere@april.biz\",\n  \"address\": {\n    \"street\": \"Kulas Light\",\n    \"suite\": \"Apt. 556\",\n    \"city\": \"Gwenborough\",\n    \"zipcode\": \"92998-3874\",\n    \"geo\": {\n      \"lat\": \"-37.3159\",\n      \"lng\": \"81.1496\"\n    }\n  },\n  \"phone\": \"1-770-736-8031 x56442\",\n  \"website\": \"hildegard.org\",\n  \"company\": {\n    \"name\": \"Romaguera-Crona\",\n    \"catchPhrase\": \"Multi-layered client-server neural-net\",\n    \"bs\": \"harness real-time e-markets\"\n  }\n}",
         "status": 200,
@@ -154,31 +160,23 @@
     },
     {
         "type": "HTTP",
+        "name": "Add a Post",
+        "description": "Add a Post",
         "headers": {
-            "Date": "Wed, 20 May 2020 10:47:52 GMT",
-            "Content-Type": "application/json; charset=utf-8",
-            "Content-Length": "153",
+            "Date": "Wed, 20 May 2020 17:16:34 GMT",
+            "Content-Type": "text/html; charset=utf-8",
+            "Transfer-Encoding": "chunked",
             "Connection": "keep-alive",
-            "Set-Cookie": "__cfduid=d957c0f577fb977106c561618186c9df91589971665; expires=Fri, 19-Jun-20 10:47:45 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
-            "X-Powered-By": "Express",
-            "Vary": "Origin, X-HTTP-Method-Override, Accept-Encoding",
-            "Access-Control-Allow-Credentials": "true",
-            "Cache-Control": "no-cache",
-            "Pragma": "no-cache",
-            "Expires": "-1",
-            "Access-Control-Expose-Headers": "Location",
-            "Location": "http://jsonplaceholder.typicode.com/posts//101",
-            "X-Content-Type-Options": "nosniff",
-            "Etag": "W/\"99-sKa67N4Cwa0yLFE1RkuFGsaDSNw\"",
-            "Via": "1.1 vegur",
+            "Set-Cookie": "__cfduid=d9244ef0840a996cd12e28b1d88ed9aab1589994964; expires=Fri, 19-Jun-20 17:16:04 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
+            "Cache-Control": "no-cache, no-store",
             "CF-Cache-Status": "DYNAMIC",
             "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
             "Server": "cloudflare",
-            "CF-RAY": "59657b3e887ea873-CDG",
-            "cf-request-id": "02d34b5b170000a873d9807200000001"
+            "CF-RAY": "5967b40e5e01f93b-MXP",
+            "cf-request-id": "02d4aedcf20000f93bb2392200000001"
         },
-        "body": "{\n  \"title\": \"A Test\",\n  \"body\": \"A body created by Leanne Graham (Bret) with email Sincere@april.biz @ -37.3159 | 81.1496\",\n  \"userId\": 1,\n  \"id\": 101\n}",
-        "status": 201,
+        "body": "<!DOCTYPE html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<meta charset=\"utf-8\">\n<title>Application Error</title>\n<style media=\"screen\">\n\t\t  html,body,iframe {\n\t\t\tmargin: 0;\n\t\t\tpadding: 0;\n\t\t  }\n\t\t  html,body {\n\t\t\theight: 100%;\n\t\t\toverflow: hidden;\n\t\t  }\n\t\t  iframe {\n\t\t\twidth: 100%;\n\t\t\theight: 100%;\n\t\t\tborder: 0;\n\t\t  }\n\t\t</style>\n</head>\n<body>\n<iframe src=\"//www.herokucdn.com/error-pages/application-error.html\"></iframe>\n</body>\n</html>",
+        "status": 503,
         "request": {
             "body": {
                 "title": "A Test",
@@ -196,19 +194,16 @@
             "method": "POST",
             "url": "https://jsonplaceholder.typicode.com/posts/"
         },
-        "json": {
-            "title": "A Test",
-            "body": "A body created by Leanne Graham (Bret) with email Sincere@april.biz @ -37.3159 | 81.1496",
-            "userId": 1,
-            "id": 101
-        }
+        "json": null
     },
     {
         "type": "ASSERT",
+        "name": "Final Check",
+        "description": "Final Check",
         "summary": {
             "total": 5,
-            "passed": 5,
-            "failed": 0
+            "passed": 2,
+            "failed": 3
         },
         "results": [
             {
@@ -223,18 +218,18 @@
             },
             {
                 "check": "'{{3.json.title}}' == 'A Test'",
-                "filled_check": "'A Test' == 'A Test'",
-                "result": true
+                "filled_check": "'0' == 'A Test'",
+                "result": false
             },
             {
                 "check": "{{3.json.userId}} == {{1.json.userId}} == {{2.json.id}}",
-                "filled_check": "1 == 1 == 1",
-                "result": true
+                "filled_check": "0 == 1 == 1",
+                "result": false
             },
             {
                 "check": "{{3.json.id}} == 101",
-                "filled_check": "101 == 101",
-                "result": true
+                "filled_check": "0 == 101",
+                "result": false
             }
         ]
     }
