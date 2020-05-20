@@ -109,6 +109,31 @@
         "{{6.status}} == 200",
         "{{7.status}} == 404"
       ]
+    },
+    {
+      "type": "ASSERT",
+      "name": "Final Check - second",
+      "description": "Check a bunch of stuff",
+      "checks": [
+        "'{{1.json.username}}' == 'marco'",
+        "{{2.status}} == 200",
+        "{{2.status}} == 201",
+        "200 <= {{2.status}} <= 300",
+        "{{3.json}} == {{2.json}}",
+        "'{{3.json.username}}' == '{{2.json.username}}'",
+        "'{{3.json.surname}}' == '{{2.json.surname}}'",
+        "{{4.status}} == 200",
+        "200 <= {{4.status}} <= 300",
+        "'{{4.json.surname}}' != '{{3.json.surname}}'",
+        "'{{3.json.name}}' != '{{4.json.name}}'",
+        "'{{4.json.surname}}' == 'crazy surname'",
+        "{{5.status}} == 200",
+        "'{{5.json.surname}}' == 'crazy surname'",
+        "'{{5.json.name}}' == '{{4.json.name}}'",
+        "'{{5.json.name}}' != '{{3.json.name}}'",
+        "{{6.status}} == 200",
+        "{{7.status}} == 404"
+      ]
     }
   ]
 }
