@@ -1,7 +1,6 @@
 import os
 import json
 from utils import api, assertion, report
-import test_report
 
 ROOT = ''
 ROOT_SUITE = ROOT + 'suites/'
