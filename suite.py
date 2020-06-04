@@ -7,6 +7,24 @@ ROOT_SUITE = ROOT + 'suites/'
 ROOT_RESULT = ROOT + 'results/'
 
 
+class SuiteConfig:
+    """
+    Support Suite Configuration Class
+    Available data:
+    * base_url: string | The base url of all calls to be done. Optional. Default is an empty string for easier concat
+    * enabled: true or false. Default: True | Whether the suite must be executed or not
+    """
+    def __init__(self, base_url='', enabled=True):
+        self.base_url = base_url
+        self.enabled = enabled
+
+    @classmethod
+    def from_config(cls, config_object):
+        base_url = config_object.get('baseUrl')
+        enabled = config_object.get('enabled')
+        return cls(base_url=base_url, enabled=enabled)
+
+
 def load_suites():
     suites = []
     for filename in os.listdir(ROOT_SUITE):
@@ -19,30 +37,33 @@ def load_suites():
 
 def execute_suite(suite):
     print('Initializing suite: {}'.format(suite.get('name', 'unnamed suite')))
-    steps = suite.get('steps', [])
-    responses = []
-    for step_number, step in enumerate(steps):
-        step_type = step.get('type')
-        step_name = step.get('name', 'WARNING: MISSING NAME')
-        step_desc = step.get('description', 'WARNING: MISSING DESCRIPTION')
-        print('Testing [{step_number}/{total_steps} : {percentage}]{type}: {name} ({desc})'.format(
-            step_number=step_number,
-            total_steps=len(steps),
-            percentage=str(round((step_number / len(steps) * 100), 1)) + '%',
-            type=step_type,
-            name=step_name,
-            desc=step_desc)
-        )
-        if step_type == 'HTTP':
-            config = api.APIConfig.from_config(suite.get('config'))
-            res = api.call(step, responses, config)
-            responses.append(res)
-        elif step_type == 'ASSERT':
-            responses.append(assertion.assertion(step, responses))
-        elif step_type == 'MOCK':
-            responses.append(api.mock(step, responses))
+    config = SuiteConfig.from_config(suite.get('config'))
+    if config.enabled:
+        steps = suite.get('steps', [])
+        responses = []
+        for step_number, step in enumerate(steps):
+            step_type = step.get('type')
+            step_name = step.get('name', 'WARNING: MISSING NAME')
+            step_desc = step.get('description', 'WARNING: MISSING DESCRIPTION')
+            print('Testing [{step_number}/{total_steps} : {percentage}] {type}: {name} ({desc})'.format(
+                step_number=step_number,
+                total_steps=len(steps),
+                percentage=str(round((step_number / len(steps) * 100), 1)) + '%',
+                type=step_type,
+                name=step_name,
+                desc=step_desc)
+            )
+            if step_type == 'HTTP':
+                res = api.call(step, responses, config)
+                responses.append(res)
+            elif step_type == 'ASSERT':
+                responses.append(assertion.assertion(step, responses))
+            elif step_type == 'MOCK':
+                responses.append(api.mock(step, responses))
 
-    report.build_report(responses, suite, ROOT_RESULT)
+        report.build_report(responses, suite, ROOT_RESULT)
+    else:
+        print('Skipping suite {name} since it is not enabled'.format(name=suite.get('name')))
 
 
 def main():

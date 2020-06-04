@@ -1,5 +1,6 @@
 import requests
 import json
+
 from . import filler
 
 VALID_HTTP_METHODS = {
@@ -11,22 +12,7 @@ VALID_HTTP_METHODS = {
 }
 
 
-class APIConfig:
-    """
-    Support API Configuration Class
-    Available data:
-    * base_url: string | The base url of all calls to be done. Optional. Default is an empty string for easier concat
-    """
-    def __init__(self, base_url=''):
-        self.base_url = base_url
-
-    @classmethod
-    def from_config(cls, config_object):
-        base_url = config_object.get('baseUrl')
-        return cls(base_url=base_url)
-
-
-def call(step, responses, config: APIConfig):
+def call(step, responses, config):
     """
     Main API Caller
     :param step:
@@ -60,9 +46,11 @@ def call(step, responses, config: APIConfig):
     return response
 
 
-def mock(step, responses, config: APIConfig):
-    ''' TODO'''
-    return 0
+def mock(step, responses):
+    response = step.get('response')
+    response_filled = filler.fill_regex(response, responses)
+    response_json = json.loads(response_filled)
+    return build_response_mock(step, response_json)
 
 
 def build_response(step, response_raw, payload):
@@ -87,6 +75,14 @@ def build_response(step, response_raw, payload):
         response["json"] = None
     return response
 
+
+def build_response_mock(step, response_json):
+    return {
+        "type": "HTTP",
+        "name": step.get("name", "Unnamed Request"),
+        "description": step.get("name", "Undescribed Request"),
+        "json": response_json
+    }
 
 # simple validation
 def validate_request(req):

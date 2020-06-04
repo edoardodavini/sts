@@ -2,10 +2,10 @@
 # Report Demo suite 003
 > A simple demo test with Mocked data
 
-* Total Tests: 4
-* Passed Tests: 3
-* Failed Tests: 1
-* Percentage: **75.0%**  :green_square::green_square::green_square::red_square:
+* Total Tests: 8
+* Passed Tests: 5
+* Failed Tests: 3
+* Percentage: **62.5%**  :green_square::green_square::green_square::green_square::green_square::red_square::red_square::red_square:
 
 **Final Check**
 > Final Check
@@ -16,3 +16,14 @@
 | {{0.status}} == 200 | 200 == 200 | :heavy_check_mark: | 
 | '{{1.json.username}}' == 'marco' | 'marco' == 'marco' | :heavy_check_mark: | 
 | {{1.status}} == 200 | 200 == 200 | :heavy_check_mark: | 
+
+
+**Check with mocked data**
+> Check with mocked data
+
+| Check | Filled Check | Result |
+| ------------ | --------- | ----- |
+| '{{3.json.email}}' == 'pippo@baudo.it' | 'pippo@baudo.it' == 'pippo@baudo.it' | :heavy_check_mark: | 
+| '{{3.json.email}}' == '{{4.json.email}}' | 'pippo@baudo.it' == 'pippo@baudo.it' | :heavy_check_mark: | 
+| '{{3.json.username}}' == '{{4.json.username}}' | 'mannaggia' == 'marco' | :x: | 
+| '{{3.json.username}}' == '{{1.json.username}}' | 'mannaggia' == 'marco' | :x: | 

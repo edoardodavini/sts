@@ -2,7 +2,8 @@
   "name": "Demo Suite number 002",
   "description": "A nice description for the Demo Suite. This uses more advanced tests and checks. Needs localhost server",
   "config": {
-    "baseUrl": "http://127.0.0.1:5000"
+    "baseUrl": "http://127.0.0.1:5000",
+    "enabled": true
   },
   "steps": [
     {
