@@ -2,15 +2,8 @@
 
 Full API Integration tests made easy
 
-* [The concept](#the-concept)
-* [Test it right away](#test-it-right-away)
-* [How it works](#how-it-works)
-+ [The main object](#the-main-object)
-+ [The Steps](#the-steps)
-  - [The Request](#the-request)
-  - [The Check](#the-check)
-* [Placeholders](#placeholders)
-* [Full Example for reference](#full-example-for-reference)
+## Table of contents
+
 
 
 ## The concept
@@ -24,7 +17,15 @@ checking that every step is doing what you would expect?
 And what if you want these steps to be completely described by a **single file**?  
 And what if you want those files to be placed in a *Repository* and maintained easily?
 
-## Test it now!
+## Features
+* Sequential test
+* Multiple asserts
+* Use outputs of API for new API Request 
+* Automatic assert evaluation using full python syntax
+* Full JSON Report generation for automated integration
+* Quick Markdown summary for "nice" integration (like automatic emails or github publish)
+
+## Test it now
 
 1. Clone this repo: `git clone https://github.com/edavini/sts.git`
 2. Navigate into the newly created folder: `cd sts`
@@ -52,14 +53,29 @@ Contains an array of [Steps](#the-steps)
 | `name`   | The name of the suite | A `string` |
 | `description` | The description of the suite | A `string` |
 | `steps` | The steps of the suite | An array of [Steps](#the-steps) |
+| `config` | The global config | A [Config](#config) json | 
 
 Example of Suite
 ```json
 {
   "name": "Suite number 001",
   "description": "A longer description of the incredible suite number 001",
-  "steps": []
+  "steps": [],
+  "config": {}
 }
+```
+
+### The config
+This is the suite global configuration.
+Available configs are:
+* baseUrl: default: `''`
+* enabled: default: `true`
+
+```json
+  {
+    "baseUrl": "http://127.0.0.1:5000",
+    "enabled": true
+  }
 ```
 
 ### The Steps
@@ -185,6 +201,23 @@ Full Example:
 }
 ```
 
+
+### The Mock
+The mock is just a mocked data used to generate a simpler response. 
+This is going to be available in the global `responses` object
+
+This is a simple example. Keep in mind that the response is just a json as a string.  
+It is possible to use string _placeholders_ 
+
+```json
+    {
+      "type": "MOCK",
+      "name": "Mocking a standard User",
+      "description": "Mocking a user",
+      "response": "{ \"email\": \"pippo@baudo.it\", \"id\": 1, \"name\": \"pippo\", \"surname\": \"baudo\", \"username\": \"mannaggia\" }"
+    }
+```
+
 #### The Check
 Checks are just an array of `string` like  
 `"'{{2.name}}' == 'Leanne Graham'"`  
@@ -204,8 +237,15 @@ Those functions are the one tested right now:
 Placeholders are as easy as possible:  
 `{{x.this.is.a.nested.path}}`
 * The double brackets are used to identify inside a string. 
-* `x` is always an integer, representing the array index of the responses (so it starts from 0)
+* `x` is always an integer, representing the array index of the [responses](#The responses) (so it starts from 0)
 * `this.is.a.nested.path` is the nested path of the object of the response. 
+
+## The responses
+During the entire execution of the suite, each result generated during each step is placed in a collector array: the Response object.  
+In this object everything is ordered by exection order and is still available for _string interpolation_ using **Placeholders**.
+
+All responses are then available in the `*_raw_report.json` for future integration
+
 
 ## The results
 This process generates 2 different reports: 
@@ -218,7 +258,6 @@ An example of a Summary Report is available [here](results/two_summary.md)
 * Add support for headers in the request object: plain string vs object? what's the best choice?
 * Add support for login-interceptors
 * Better error handling
-* Add MOCK step type, for mocked data just to be verified in the next steps
 * Test more checks, like usage of functions (done), including filters and map
 * redesign with better python classes usage
 * more stuff
