@@ -7,7 +7,7 @@
             "Content-Type": "application/json",
             "Content-Length": "2124",
             "Server": "Werkzeug/1.0.1 Python/3.8.1",
-            "Date": "Thu, 04 Jun 2020 21:01:06 GMT"
+            "Date": "Thu, 04 Jun 2020 22:26:48 GMT"
         },
         "body": "[\n  {\n    \"email\": \"pippo@baudo.it\", \n    \"id\": 1, \n    \"name\": \"pippo\", \n    \"surname\": \"baudo\", \n    \"username\": \"mannaggia\"\n  }, \n  {\n    \"email\": \"marco@bartali.it\", \n    \"id\": 2, \n    \"name\": \"marco\", \n    \"surname\": \"bartali\", \n    \"username\": \"marco\"\n  }, \n  {\n    \"email\": \"gino@bartali.it\", \n    \"id\": 3, \n    \"name\": \"gino\", \n    \"surname\": \"bartali\", \n    \"username\": \"gino\"\n  }, \n  {\n    \"email\": \"gino@barta.it\", \n    \"id\": 4, \n    \"name\": \"ginuccia\", \n    \"surname\": \"bartalosa\", \n    \"username\": \"ginella\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 5, \n    \"name\": \"uno\", \n    \"surname\": \"utente\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 6, \n    \"name\": \"uno\", \n    \"surname\": \"utente\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 7, \n    \"name\": \"uno\", \n    \"surname\": \"utente\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 8, \n    \"name\": \"uno\", \n    \"surname\": \"utente\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 9, \n    \"name\": \"due\", \n    \"surname\": \"utentazzo\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 10, \n    \"name\": \"due\", \n    \"surname\": \"utentazzo\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 11, \n    \"name\": \"due\", \n    \"surname\": \"utentazzo\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 12, \n    \"name\": \"uno\", \n    \"surname\": \"utente\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 13, \n    \"name\": \"due\", \n    \"surname\": \"utentazzo\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 14, \n    \"name\": \"due\", \n    \"surname\": \"utentazzo\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 15, \n    \"name\": \"due\", \n    \"surname\": \"utentazzo\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 16, \n    \"name\": \"uno\", \n    \"surname\": \"utente\", \n    \"username\": \"another\"\n  }\n]\n",
         "status": 200,
@@ -145,7 +145,7 @@
             "Content-Type": "application/json",
             "Content-Length": "115",
             "Server": "Werkzeug/1.0.1 Python/3.8.1",
-            "Date": "Thu, 04 Jun 2020 21:01:06 GMT"
+            "Date": "Thu, 04 Jun 2020 22:26:48 GMT"
         },
         "body": "{\n  \"email\": \"marco@bartali.it\", \n  \"id\": 2, \n  \"name\": \"marco\", \n  \"surname\": \"bartali\", \n  \"username\": \"marco\"\n}\n",
         "status": 200,
@@ -201,7 +201,7 @@
         ]
     },
     {
-        "type": "HTTP",
+        "type": "MOCK",
         "name": "Mocking a standard User",
         "description": "Mocking a standard User",
         "json": {
@@ -213,7 +213,7 @@
         }
     },
     {
-        "type": "HTTP",
+        "type": "MOCK",
         "name": "Mocking a User with injected data",
         "description": "Mocking a User with injected data",
         "json": {
