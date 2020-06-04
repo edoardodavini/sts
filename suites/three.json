@@ -1,0 +1,40 @@
+{
+  "name": "Demo suite 003",
+  "description": "A simple demo test with Mocked data",
+  "config": {
+    "baseUrl": "http://127.0.0.1:5000"
+  },
+  "steps": [
+    {
+      "type": "HTTP",
+      "name": "Get Users",
+      "description": "Get all Users",
+      "request": {
+        "url": "{{baseUrl}}/users",
+        "method": "GET",
+        "data": null
+      }
+    },
+    {
+      "type": "HTTP",
+      "name": "Get User by ID",
+      "description": "Get user with ID: 2",
+      "request": {
+        "url": "{{baseUrl}}/users/2",
+        "method": "GET",
+        "data": null
+      }
+    },
+    {
+      "type": "ASSERT",
+      "name": "Final Check",
+      "description": "Check a bunch of stuff",
+      "checks": [
+        "len({{0.json}}) == 8",
+        "{{0.status}} == 200",
+        "'{{1.json.username}}' == 'marco'",
+        "{{1.status}} == 200"
+      ]
+    }
+  ]
+}

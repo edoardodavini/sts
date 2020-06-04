@@ -1,8 +1,8 @@
 {
-  "name": "Suite number 002",
-  "description": "A longer description of the incredible suite number 001",
+  "name": "Demo Suite number 002",
+  "description": "A nice description for the Demo Suite. This uses more advanced tests and checks. Needs localhost server",
   "config": {
-    "baseUrl": "http://localhost:5000"
+    "baseUrl": "http://127.0.0.1:5000"
   },
   "steps": [
     {
@@ -87,11 +87,10 @@
     },
     {
       "type": "ASSERT",
-      "name": "Final Check",
-      "description": "Check a bunch of stuff",
+      "name": "First assertion check",
+      "description": "This is the first check. All checks should be true",
       "checks": [
         "'{{1.json.username}}' == 'marco'",
-        "{{2.status}} == 200",
         "{{2.status}} == 201",
         "200 <= {{2.status}} <= 300",
         "{{3.json}} == {{2.json}}",
@@ -112,8 +111,8 @@
     },
     {
       "type": "ASSERT",
-      "name": "Final Check - second",
-      "description": "Check a bunch of stuff",
+      "name": "Second check",
+      "description": "Check a bunch of stuff. Uses advanced functions and is expected to get more KO",
       "checks": [
         "{{2.status}} == 'PIZZA!'",
         "'{{5.json.surname}}' == 'this is going to fail miserably'",

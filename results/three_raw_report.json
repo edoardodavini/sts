@@ -1,0 +1,203 @@
+[
+    {
+        "type": "HTTP",
+        "name": "Get Users",
+        "description": "Get Users",
+        "headers": {
+            "Content-Type": "application/json",
+            "Content-Length": "2124",
+            "Server": "Werkzeug/1.0.1 Python/3.8.1",
+            "Date": "Thu, 04 Jun 2020 17:39:31 GMT"
+        },
+        "body": "[\n  {\n    \"email\": \"pippo@baudo.it\", \n    \"id\": 1, \n    \"name\": \"pippo\", \n    \"surname\": \"baudo\", \n    \"username\": \"mannaggia\"\n  }, \n  {\n    \"email\": \"marco@bartali.it\", \n    \"id\": 2, \n    \"name\": \"marco\", \n    \"surname\": \"bartali\", \n    \"username\": \"marco\"\n  }, \n  {\n    \"email\": \"gino@bartali.it\", \n    \"id\": 3, \n    \"name\": \"gino\", \n    \"surname\": \"bartali\", \n    \"username\": \"gino\"\n  }, \n  {\n    \"email\": \"gino@barta.it\", \n    \"id\": 4, \n    \"name\": \"ginuccia\", \n    \"surname\": \"bartalosa\", \n    \"username\": \"ginella\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 5, \n    \"name\": \"uno\", \n    \"surname\": \"utente\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 6, \n    \"name\": \"uno\", \n    \"surname\": \"utente\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 7, \n    \"name\": \"uno\", \n    \"surname\": \"utente\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 8, \n    \"name\": \"uno\", \n    \"surname\": \"utente\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 9, \n    \"name\": \"due\", \n    \"surname\": \"utentazzo\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 10, \n    \"name\": \"due\", \n    \"surname\": \"utentazzo\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 11, \n    \"name\": \"due\", \n    \"surname\": \"utentazzo\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 12, \n    \"name\": \"uno\", \n    \"surname\": \"utente\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 13, \n    \"name\": \"due\", \n    \"surname\": \"utentazzo\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 14, \n    \"name\": \"due\", \n    \"surname\": \"utentazzo\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 15, \n    \"name\": \"due\", \n    \"surname\": \"utentazzo\", \n    \"username\": \"another\"\n  }, \n  {\n    \"email\": \"another@utente.it\", \n    \"id\": 16, \n    \"name\": \"uno\", \n    \"surname\": \"utente\", \n    \"username\": \"another\"\n  }\n]\n",
+        "status": 200,
+        "request": {
+            "body": null,
+            "headers": {
+                "User-Agent": "python-requests/2.23.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive"
+            },
+            "method": "GET",
+            "url": "http://127.0.0.1:5000/users"
+        },
+        "json": [
+            {
+                "email": "pippo@baudo.it",
+                "id": 1,
+                "name": "pippo",
+                "surname": "baudo",
+                "username": "mannaggia"
+            },
+            {
+                "email": "marco@bartali.it",
+                "id": 2,
+                "name": "marco",
+                "surname": "bartali",
+                "username": "marco"
+            },
+            {
+                "email": "gino@bartali.it",
+                "id": 3,
+                "name": "gino",
+                "surname": "bartali",
+                "username": "gino"
+            },
+            {
+                "email": "gino@barta.it",
+                "id": 4,
+                "name": "ginuccia",
+                "surname": "bartalosa",
+                "username": "ginella"
+            },
+            {
+                "email": "another@utente.it",
+                "id": 5,
+                "name": "uno",
+                "surname": "utente",
+                "username": "another"
+            },
+            {
+                "email": "another@utente.it",
+                "id": 6,
+                "name": "uno",
+                "surname": "utente",
+                "username": "another"
+            },
+            {
+                "email": "another@utente.it",
+                "id": 7,
+                "name": "uno",
+                "surname": "utente",
+                "username": "another"
+            },
+            {
+                "email": "another@utente.it",
+                "id": 8,
+                "name": "uno",
+                "surname": "utente",
+                "username": "another"
+            },
+            {
+                "email": "another@utente.it",
+                "id": 9,
+                "name": "due",
+                "surname": "utentazzo",
+                "username": "another"
+            },
+            {
+                "email": "another@utente.it",
+                "id": 10,
+                "name": "due",
+                "surname": "utentazzo",
+                "username": "another"
+            },
+            {
+                "email": "another@utente.it",
+                "id": 11,
+                "name": "due",
+                "surname": "utentazzo",
+                "username": "another"
+            },
+            {
+                "email": "another@utente.it",
+                "id": 12,
+                "name": "uno",
+                "surname": "utente",
+                "username": "another"
+            },
+            {
+                "email": "another@utente.it",
+                "id": 13,
+                "name": "due",
+                "surname": "utentazzo",
+                "username": "another"
+            },
+            {
+                "email": "another@utente.it",
+                "id": 14,
+                "name": "due",
+                "surname": "utentazzo",
+                "username": "another"
+            },
+            {
+                "email": "another@utente.it",
+                "id": 15,
+                "name": "due",
+                "surname": "utentazzo",
+                "username": "another"
+            },
+            {
+                "email": "another@utente.it",
+                "id": 16,
+                "name": "uno",
+                "surname": "utente",
+                "username": "another"
+            }
+        ]
+    },
+    {
+        "type": "HTTP",
+        "name": "Get User by ID",
+        "description": "Get User by ID",
+        "headers": {
+            "Content-Type": "application/json",
+            "Content-Length": "115",
+            "Server": "Werkzeug/1.0.1 Python/3.8.1",
+            "Date": "Thu, 04 Jun 2020 17:39:31 GMT"
+        },
+        "body": "{\n  \"email\": \"marco@bartali.it\", \n  \"id\": 2, \n  \"name\": \"marco\", \n  \"surname\": \"bartali\", \n  \"username\": \"marco\"\n}\n",
+        "status": 200,
+        "request": {
+            "body": null,
+            "headers": {
+                "User-Agent": "python-requests/2.23.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive"
+            },
+            "method": "GET",
+            "url": "http://127.0.0.1:5000/users/2"
+        },
+        "json": {
+            "email": "marco@bartali.it",
+            "id": 2,
+            "name": "marco",
+            "surname": "bartali",
+            "username": "marco"
+        }
+    },
+    {
+        "type": "ASSERT",
+        "name": "Final Check",
+        "description": "Final Check",
+        "summary": {
+            "total": 4,
+            "passed": 3,
+            "failed": 1
+        },
+        "results": [
+            {
+                "check": "len({{0.json}}) == 8",
+                "filled_check": "len([{'email': 'pippo@baudo.it', 'id': 1, 'name': 'pippo', 'surname': 'baudo', 'username': 'mannaggia'}, {'email': 'marco@bartali.it', 'id': 2, 'name': 'marco', 'surname': 'bartali', 'username': 'marco'}, {'email': 'gino@bartali.it', 'id': 3, 'name': 'gino', 'surname': 'bartali', 'username': 'gino'}, {'email': 'gino@barta.it', 'id': 4, 'name': 'ginuccia', 'surname': 'bartalosa', 'username': 'ginella'}, {'email': 'another@utente.it', 'id': 5, 'name': 'uno', 'surname': 'utente', 'username': 'another'}, {'email': 'another@utente.it', 'id': 6, 'name': 'uno', 'surname': 'utente', 'username': 'another'}, {'email': 'another@utente.it', 'id': 7, 'name': 'uno', 'surname': 'utente', 'username': 'another'}, {'email': 'another@utente.it', 'id': 8, 'name': 'uno', 'surname': 'utente', 'username': 'another'}, {'email': 'another@utente.it', 'id': 9, 'name': 'due', 'surname': 'utentazzo', 'username': 'another'}, {'email': 'another@utente.it', 'id': 10, 'name': 'due', 'surname': 'utentazzo', 'username': 'another'}, {'email': 'another@utente.it', 'id': 11, 'name': 'due', 'surname': 'utentazzo', 'username': 'another'}, {'email': 'another@utente.it', 'id': 12, 'name': 'uno', 'surname': 'utente', 'username': 'another'}, {'email': 'another@utente.it', 'id': 13, 'name': 'due', 'surname': 'utentazzo', 'username': 'another'}, {'email': 'another@utente.it', 'id': 14, 'name': 'due', 'surname': 'utentazzo', 'username': 'another'}, {'email': 'another@utente.it', 'id': 15, 'name': 'due', 'surname': 'utentazzo', 'username': 'another'}, {'email': 'another@utente.it', 'id': 16, 'name': 'uno', 'surname': 'utente', 'username': 'another'}]) == 8",
+                "result": false
+            },
+            {
+                "check": "{{0.status}} == 200",
+                "filled_check": "200 == 200",
+                "result": true
+            },
+            {
+                "check": "'{{1.json.username}}' == 'marco'",
+                "filled_check": "'marco' == 'marco'",
+                "result": true
+            },
+            {
+                "check": "{{1.status}} == 200",
+                "filled_check": "200 == 200",
+                "result": true
+            }
+        ]
+    }
+]

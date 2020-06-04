@@ -1,6 +1,6 @@
 
-# Report Suite number 001
-> A longer description of the incredible suite number 001
+# Report Demo Suite number 001
+> The First Demo suite. Just with basic functions: Just HTTP + a bunch of simple tests. Uses typicode for demo calls
 
 * Total Tests: 5
 * Passed Tests: 5
@@ -8,6 +8,8 @@
 * Percentage: **100.0%**  :green_square::green_square::green_square::green_square::green_square:
 
 **Final Check**
+> Final Check
+
 | Check | Filled Check | Result |
 | ------------ | --------- | ----- |
 | '{{2.json.name}}' == 'Leanne Graham' | 'Leanne Graham' == 'Leanne Graham' | :heavy_check_mark: | 

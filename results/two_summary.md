@@ -1,17 +1,18 @@
 
-# Report Suite number 002
-> A longer description of the incredible suite number 001
+# Report Demo Suite number 002
+> A nice description for the Demo Suite. This uses more advanced tests and checks. Needs localhost server
 
-* Total Tests: 23
+* Total Tests: 22
 * Passed Tests: 16
-* Failed Tests: 7
-* Percentage: **69.57%**  :green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square:
+* Failed Tests: 6
+* Percentage: **72.73%**  :green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::red_square::red_square::red_square::red_square::red_square::red_square:
 
-**Final Check**
+**First assertion check**
+> First assertion check
+
 | Check | Filled Check | Result |
 | ------------ | --------- | ----- |
 | '{{1.json.username}}' == 'marco' | 'marco' == 'marco' | :heavy_check_mark: | 
-| {{2.status}} == 200 | 201 == 200 | :x: | 
 | {{2.status}} == 201 | 201 == 201 | :heavy_check_mark: | 
 | 200 <= {{2.status}} <= 300 | 200 <= 201 <= 300 | :heavy_check_mark: | 
 | {{3.json}} == {{2.json}} | {'email': 'another@utente.it', 'id': 17, 'name': 'uno', 'surname': 'utente', 'username': 'another'} == {'email': 'another@utente.it', 'id': 17, 'name': 'uno', 'surname': 'utente', 'username': 'another'} | :heavy_check_mark: | 
@@ -30,7 +31,9 @@
 | {{7.status}} == 404 | 500 == 404 | :x: | 
 
 
-**Final Check - second**
+**Second check**
+> Second check
+
 | Check | Filled Check | Result |
 | ------------ | --------- | ----- |
 | {{2.status}} == 'PIZZA!' | 201 == 'PIZZA!' | :x: | 

@@ -1,6 +1,6 @@
 {
-  "name": "Suite number 001",
-  "description": "A longer description of the incredible suite number 001",
+  "name": "Demo Suite number 001",
+  "description": "The First Demo suite. Just with basic functions: Just HTTP + a bunch of simple tests. Uses typicode for demo calls",
   "config": {
     "baseUrl": "https://jsonplaceholder.typicode.com"
   },
