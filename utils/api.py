@@ -78,7 +78,7 @@ def build_response(step, response_raw, payload):
 
 def build_response_mock(step, response_json):
     return {
-        "type": "HTTP",
+        "type": "MOCK",
         "name": step.get("name", "Unnamed Request"),
         "description": step.get("name", "Undescribed Request"),
         "json": response_json
