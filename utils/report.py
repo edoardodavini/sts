@@ -71,9 +71,11 @@ def build_markdown_detailed(assertion):
     report = '''
 
 **{name}**
+> {desc}
+
 | Check | Filled Check | Result |
 | ------------ | --------- | ----- |
-'''.format(name=assertion.get('name'))
+'''.format(name=assertion.get('name', 'Unnamed Assertion'), desc=assertion.get('description', ''))
 
     for result in assertion['results']:
         report += '| {check} | {filled} | {result} | \n'.format(
