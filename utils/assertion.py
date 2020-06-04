@@ -1,4 +1,4 @@
-import filler
+from . import filler
 
 
 def assertion(step, responses):

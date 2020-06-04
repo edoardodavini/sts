@@ -1,7 +1,6 @@
 import os
 import json
-import api
-import assertion
+from utils import api, assertion
 import test_report
 
 ROOT = ''
@@ -21,7 +20,6 @@ def load_suites():
 
 def execute_suite(suite):
     print('Initializing suite: {}'.format(suite.get('name', 'unnamed suite')))
-    config = suite.get('config', {})
     steps = suite.get('steps', [])
     responses = []
     for step_number, step in enumerate(steps):
@@ -37,10 +35,13 @@ def execute_suite(suite):
             desc=step_desc)
         )
         if step_type == 'HTTP':
+            config = api.APIConfig.from_config(suite.get('config'))
             res = api.call(step, responses, config)
             responses.append(res)
         elif step_type == 'ASSERT':
             responses.append(assertion.assertion(step, responses))
+        elif step_type == 'MOCK':
+            responses.append(api.mock(step, responses))
 
     test_report.build_report(responses, suite, ROOT_RESULT)
 

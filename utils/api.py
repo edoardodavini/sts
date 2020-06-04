@@ -1,6 +1,6 @@
 import requests
 import json
-import filler
+from . import filler
 
 VALID_HTTP_METHODS = {
     'GET':      ['url'],
@@ -11,14 +11,34 @@ VALID_HTTP_METHODS = {
 }
 
 
-# http calls with string building:
-def call(step, responses, config={}):
+class APIConfig:
+    """
+    Support API Configuration Class
+    Available data:
+    * base_url: string
+    """
+    def __init__(self, base_url=''):
+        self.base_url = base_url
+
+    @classmethod
+    def from_config(cls, config_object):
+        base_url = config_object.get('baseUrl')
+        return cls(base_url=base_url)
+
+
+def call(step, responses, config: APIConfig):
+    """
+    Main API Caller
+    :param step:
+    :param responses:
+    :param config:
+    :return:
+    """
     req = step.get('request')
     validate_request(req)
-    base_url = config.get('baseUrl', '')
 
     method = req.get('method', None)
-    url = filler.fill_regex(req['url'].replace('{{baseUrl}}', base_url), responses)
+    url = filler.fill_regex(req['url'].replace('{{baseUrl}}', config.base_url), responses)
     payload = req.get('data', None)
     if payload is not None:
         payload_clean = filler.fill_regex(payload, responses)
@@ -27,6 +47,25 @@ def call(step, responses, config={}):
 
     print('Calling {method} @ {url}'.format(method=method, url=url))
     response_raw = requests.request(method=method, url=url, json=payload, headers=headers)
+
+    response_json = {}
+    try:
+        response_json = response_raw.json()
+    except ValueError:
+        print('Invalid json')
+        # no JSON: nothing to do
+
+    print('Response ({number}) {status}: {response}'.format(number=len(responses), status=response_raw.status_code, response=json.dumps(response_json)))
+    response = build_response(step, response_raw, payload)
+    return response
+
+
+def mock(step, responses, config={}):
+    ''' TODO'''
+    return 0
+
+
+def build_response(step, response_raw, payload):
     response = {
         "type": "HTTP",
         "name": step.get("name", "Unnamed Request"),
@@ -46,7 +85,6 @@ def call(step, responses, config={}):
     except json.JSONDecodeError:
         print('Unable to parse json response')
         response["json"] = None
-    print('Response ({number}) {status}: {response}'.format(number=len(responses), status=response['status'], response=json.dumps(response.get('json', 'No Json Available'))))
     return response
 
 
@@ -65,3 +103,5 @@ def validate_request(req):
             raise Exception('MISSING {config} FROM {name}'.format(config=config, name=name))
 
     return True
+
+

@@ -2,10 +2,10 @@
 # Report Suite number 002
 > A longer description of the incredible suite number 001
 
-* Total Tests: 24
-* Passed Tests: 17
+* Total Tests: 23
+* Passed Tests: 16
 * Failed Tests: 7
-* Percentage: **70.83%**  :green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square:
+* Percentage: **69.57%**  :green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::green_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square:
 
 **Final Check**
 | Check | Filled Check | Result |
@@ -33,7 +33,6 @@
 **Final Check - second**
 | Check | Filled Check | Result |
 | ------------ | --------- | ----- |
-| '{{1.json.username}}' == 'marco' | 'marco' == 'marco' | :heavy_check_mark: | 
 | {{2.status}} == 'PIZZA!' | 201 == 'PIZZA!' | :x: | 
 | '{{5.json.surname}}' == 'this is going to fail miserably' | 'crazy surname' == 'this is going to fail miserably' | :x: | 
 | True == False | True == False | :x: | 
