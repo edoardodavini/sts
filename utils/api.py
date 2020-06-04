@@ -15,7 +15,7 @@ class APIConfig:
     """
     Support API Configuration Class
     Available data:
-    * base_url: string
+    * base_url: string | The base url of all calls to be done. Optional. Default is an empty string for easier concat
     """
     def __init__(self, base_url=''):
         self.base_url = base_url
@@ -60,7 +60,7 @@ def call(step, responses, config: APIConfig):
     return response
 
 
-def mock(step, responses, config={}):
+def mock(step, responses, config: APIConfig):
     ''' TODO'''
     return 0
 
