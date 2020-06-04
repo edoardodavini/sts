@@ -3,7 +3,25 @@
 Full API Integration tests made easy
 
 ## Table of contents
-
+- [STS: Simple Test Suite (or TAK: Test API Kit)](#sts--simple-test-suite--or-tak--test-api-kit-)
+  * [Table of contents](#table-of-contents)
+  * [The concept](#the-concept)
+  * [Features](#features)
+  * [Test it now](#test-it-now)
+  * [How it works](#how-it-works)
+    + [The main object](#the-main-object)
+    + [The config](#the-config)
+    + [The Steps](#the-steps)
+      - [The Request](#the-request)
+        * [The request's Response](#the-request-s-response)
+    + [The Mock](#the-mock)
+      - [The Check](#the-check)
+  * [Placeholders](#placeholders)
+  * [The responses](#the-responses)
+  * [The results](#the-results)
+  * [To be done / next steps](#to-be-done---next-steps)
+  * [Full Example for reference](#full-example-for-reference)
+  * [Contribute](#contribute)
 
 
 ## The concept
