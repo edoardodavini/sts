@@ -1,6 +1,6 @@
 import os
 import json
-from utils import api, assertion
+from utils import api, assertion, report
 import test_report
 
 ROOT = ''
@@ -43,7 +43,7 @@ def execute_suite(suite):
         elif step_type == 'MOCK':
             responses.append(api.mock(step, responses))
 
-    test_report.build_report(responses, suite, ROOT_RESULT)
+    report.build_report(responses, suite, ROOT_RESULT)
 
 
 def main():
