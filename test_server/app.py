@@ -23,6 +23,27 @@ def index():
     }
 
 
+@app.route('/login-plain', methods=['POST'])
+def login_plain():
+    return jsonify({"status": "Success", "token": "1asd81wq691dqw61ds3a51d3wa1"}), 200
+
+
+@app.route('/login-post', methods=['POST'])
+def login_post():
+    if not request.json:
+        return jsonify({"status": "Unauthorized"}), 401
+    # This is not a real login situation
+    if request.json.username == 'username' and request.json.password == 'password':
+        return jsonify({"status": "Success", "token": "1asd81wq691dqw61ds3a51d3wa1"}), 200
+    else:
+        return jsonify({"status": "Forbidden"}), 403
+
+
+@app.route('/login-get', methods=['GET'])
+def login_get():
+    return jsonify({"status": "Success", "token": "1asd81wq691dqw61ds3a51d3wa1"}), 200
+
+
 @app.route('/users/<int:user_id>', methods=['GET'])
 def user_by_id(user_id):
     user = list(filter(lambda x: x['id'] == user_id, get_users()))[0]
