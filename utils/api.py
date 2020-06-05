@@ -1,7 +1,7 @@
 import requests
 import json
 
-from . import filler
+from . import filler, models
 
 VALID_HTTP_METHODS = {
     'GET':      ['url'],
@@ -12,7 +12,7 @@ VALID_HTTP_METHODS = {
 }
 
 
-def call(step, responses, config):
+def call(step, responses, config: models.SuiteConfig):
     """
     Main API Caller
     :param step:
